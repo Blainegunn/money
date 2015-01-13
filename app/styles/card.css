@@ -1,0 +1,39 @@
+#theCard{
+	background: rgb(197, 197, 197);
+	border: 2px #000 solid;
+	width: 550px;
+	height: 355px;
+	border-radius: 20px;
+}
+#cardNo{
+	/*width: 200px;*/
+	text-align: center;
+	margin: 0 auto;
+	font-size: 45px;
+	position: relative;
+	top: 100px;
+}
+
+#cardExp {
+	/* width: 200px; */
+	/* text-align: center; */
+	margin: 0 auto 0 20px;
+	font-size: 20px;
+	position: relative;
+	left: 255px;
+	top: 110px;
+}
+#cardName{
+	/* width: 200px; */
+	/* text-align: center; */
+	margin: 0 auto 0 20px;
+	font-size: 20px;
+	position: relative;
+	left: 15px;
+	top: 140px;
+}
+.cardLogo{
+	position: relative;
+	top: 275px;
+	left: 425px;
+}
