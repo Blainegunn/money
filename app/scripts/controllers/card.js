@@ -12,9 +12,9 @@ angular.module('moneyApp')
   	$scope.card = customers
   })
 
-  .directive('copyTest', [function(scope, ele, attrs){
+  .directive('copyTest', [function(){
   	var copyTest;
-  	copyTest = function(){
+  	copyTest = function(scope, ele, attrs){
   		console.log('turrtle')
   		var copyBtn = document.getElementById('copyBtn');
   		copyBtn.onclick = function(){
@@ -29,6 +29,60 @@ angular.module('moneyApp')
 
   	}
   }])
+  .directive('deleteCard', [function(){
+  	var deleteCard;
+  	deleteCard = function(scope, ele, attrs){
+  		var deleteBtn = document.getElementById('deleteBtn');
+  		var cardType  = document.getElementById('cardNo');
+  		deleteBtn.onclick = function(){
+  			for(var i = 0; i < customers.length ; i++){
+  				console.log('the list is ' + customers[i].cardNo );
+
+  				if(cardNo.innerText === customers[i].cardNo){
+  					//destroy the deleted card 
+  					customers[i].name = 'no data'
+  					customers[i].cardNo = null
+  					customers[i].exp = null
+  					customers[i].cardType = 'logo'
+  					customers[i].address = 'no data'
+  					scope.$apply();
+  				}
+  			}
+  			console.log(cardNo.innerText)
+  		}
+  	}
+  	return{
+  		restrict: 'A',
+  		link: deleteCard
+  	}
+  }])
+  .directive('editCard', [function(){
+  	var editCard;
+  	editCard = function(scope,ele,attrs){
+  		var ogCardNo = document.getElementById('cardNo').innerText;
+  		var cardNo = document.getElementById('editCardNo1').value;
+  		console.log(ogCardNo);
+  		cardNo = '123';
+  		console.log(cardNo);
+  		
+  	}
+  	return{
+  		restrict: "A",
+  		link: editCard
+  	}
+  }])
+
+
+
+
+
+// var p = {name: 'blaine ', last: 'gunn'}
+// for (var key in p) {
+//   if (p.hasOwnProperty(key)) {
+//     console.log(key + " -> " + p[key]);
+//     p[key] = undefined;
+//   }
+// }
 
 
 var customers = [

@@ -37,13 +37,69 @@
 	</button> 
 </div>
 
-<div style="clear: both;">
+<div style="clear: both; padding-bottom: 40px;">
 	<h1> Address:</h1>
 		<p>{{ct.address}}</p>
 </div>
 
 
+<button edit-Card type="button" id="editBtn" class="btn btn-primary" ng-click="editView = !editView" >Edit</button>
+<button delete-Card type="button" id="deleteBtn" class="btn btn-danger">Delete</button>
+
+<div style="padding-bottom: 20px;" ></div>
+
+<!-- edit modal  -->
+<div id="editBox" ng-init="editView = flase" ng-show="editView">
+
+	<div class="form-horizontal">
+
+	  <div class="form-group">
+	    <label for="" class="col-sm-2 control-label">Card Number</label>
+	    <div class="col-sm-10">
+	      <input type="password" class="form-control" id="editCardNo1" placeholder="card number" maxlength="16">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="" class="col-sm-2 control-label">Re-enter Card Number</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="editCardNo1" placeholder="card number" maxlength="16">
+	    </div>
+	  </div>	
+	  <div class="form-group">
+	    <label for="" class="col-sm-2 control-label">Name</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="inputPassword3" placeholder="Name as appears on card">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="" class="col-sm-2 control-label">Exp. Date</label>
+	    <div class="col-xs-2">
+	      <input type="text" class="form-control" id="inputPassword3" maxlength="4" min="4" placeholder="Exp. Date">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="" class="col-sm-2 control-label">Card Type</label>
+	    <div class="col-xs-2">
+	      <select>
+	      	<option></option>
+	      	<option>Visa</option>
+	      	<option>Master Card</option>
+	      	<option>AMEX</option>
+	      	<option>Discover</option>
+	      </select>
+	    </div>  
+	  </div>
+	  <div class="form-group">
+	    <label for="" class="col-sm-2 control-label">Address</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="inputPassword3" maxlength="4" min="4" placeholder="Billing Address">
+	    </div>
+	  </div>
+	</div>
 
 
+	<button type="button" class="btn btn-success">Save</button>
+
+</div>
 
 

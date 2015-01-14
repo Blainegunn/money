@@ -43,4 +43,16 @@
 	top: 185px;
 	left: 30px;
 }
-/*wegkngskllfkhfhlfsckbdn glksfhlfhlsfhns;kch/fks sjgbsljkfksgsjgas.bjv afsu ga*/
+.mainLogo{
+	margin-bottom: 2px;
+}
+#editBox{
+	border: 2px #000 solid;
+	border-radius: 10px;
+	padding: 20px;
+	position: fixed;
+	top: 130px;
+	width: 700px;
+	background: #fff;
+
+}
