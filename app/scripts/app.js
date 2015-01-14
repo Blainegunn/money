@@ -31,7 +31,11 @@ angular
         templateUrl: 'views/card.html',
         controller: 'CardCtrl'
       })
+    .when('/error', {
+        templateUrl: 'views/error.html',
+        controller: 'ErrorCtrl'
+      })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/error'
       });
   });
