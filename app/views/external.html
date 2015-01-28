@@ -23,8 +23,9 @@
 		</strong>
 	</p>
 	<p id="cardExp">
+	<span style="font-size:10px; position:relative; top: 19px; right: 20px;" >VALID</span> <br /><span style="font-size:10px; position:relative;right: 20px" >THRU</span>
 		<strong>
-			Exp. {{ct.exp}}
+			<!-- Exp. --> {{ct.exp}}
 		</strong>
 	</p>
 	<p id="cardName">
@@ -37,19 +38,54 @@
 	</button> 
 </div>
 
-<div style="clear: both; padding-bottom: 40px;">
+<div style="clear: both; padding-top: 5px;  padding-bottom: 40px;">
 	<h1>Billing Address:</h1>
-		<p>{{ct.address}}</p>
-</div>
+		<div>{{ct.address}}</div>
+
+		<div id="container" class="left">
+			<div>
+				Address Line 1:
+			</div>
+			<div  ng-show="ct.address2">
+				Address Line 2:
+			</div>
+			<div>
+				City:
+			</div>
+			<div>
+				Zip:
+			</div>
+		</div>
+
+		<div id="container">
+			<div>
+				{{ct.address1}}
+			</div>
+			<div  ng-show="ct.address2">
+				{{ct.address2}}
+			</div>
+			<div>
+				{{ct.city + ', ' + ct.state}}
+			</div>
+			<div>
+				{{ct.zip}}
+			</div>
+		</div>
+	
 
 
-<button edit-Card type="button" id="editBtn" class="btn btn-primary" ng-click="editView = !editView" >Edit</button>
+
+
+
+<div id="clear" ></div>
+
+<!-- <button edit-Card type="button" id="editBtn" class="btn btn-primary" ng-click="editView = !editView" >Edit</button>
 <button delete-Card type="button" id="deleteBtn" class="btn btn-danger">Delete</button>
 
-<div style="padding-bottom: 20px;" ></div>
+<div style="padding-bottom: 20px;" ></div> -->
 
 <!-- edit modal  -->
-<div id="editBox" ng-init="editView = flase" ng-show="editView">
+<!-- <div id="editBox" ng-init="editView = flase" ng-show="editView">
 
 	<div class="form-horizontal">
 
@@ -103,3 +139,4 @@
 </div>
 
 
+ -->

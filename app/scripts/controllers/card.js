@@ -91,7 +91,11 @@ var customers = [
 		cardNo: '3434 34523 8260 2325',
 		exp: '1/17',
 		cardType: 'visa',
-		address: ' 286 I Street  \n SLC, UT 84103 '
+		address1: ' 286 I Street',
+    address2: 'Room #3',
+    city: 'Salt Lake City',
+    state: 'Utah',
+    zip: '84103 '
 	},
 	{
 		name: 'John Adamson',

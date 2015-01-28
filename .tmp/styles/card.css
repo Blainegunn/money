@@ -20,8 +20,10 @@
 	margin: 0 auto 0 20px;
 	font-size: 20px;
 	position: relative;
-	left: 255px;
-	top: 110px;
+/*	left: 255px;
+	top: 110px;*/
+left: 240px;
+top: 120px;
 }
 #cardName{
 	/* width: 200px; */
@@ -30,7 +32,7 @@
 	font-size: 20px;
 	position: relative;
 	left: 15px;
-	top: 140px;
+	top: 130px;
 }
 .cardLogo{
 	position: relative;
@@ -54,5 +56,13 @@
 	top: 130px;
 	width: 700px;
 	background: #fff;
+}
+#container{
+	float: left;
+	margin: 0 20px 0 0;
+	font-size: 16px;
+}
 
+#clear{
+	clear: both;
 }

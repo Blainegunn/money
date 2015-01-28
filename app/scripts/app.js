@@ -23,6 +23,10 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
@@ -33,6 +37,10 @@ angular
       })
     .when('/theCard', {
         templateUrl: 'views/card.html',
+        controller: 'CardCtrl'
+      })
+    .when('/external', {
+        templateUrl: 'views/external.html',
         controller: 'CardCtrl'
       })
     .when('/error', {
